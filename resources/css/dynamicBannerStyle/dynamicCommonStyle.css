@@ -51,6 +51,7 @@
 }
 
 .mobileDivision {
+    border: solid 1px red;
     display: none;
     /* 1 column */
     width: 100%;
