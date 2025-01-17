@@ -1,8 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
     window.swiper = new Swiper(".menuSwiper", {
-        slidesPerView: 1.2,
+        slidesPerView: 1.3,
         spaceBetween: 10,
         breakpoints: {
+            450: {
+                slidesPerView: 1.5,
+            },
             768: {
                 slidesPerView: 2.7,
                 spaceBetween: 20,
