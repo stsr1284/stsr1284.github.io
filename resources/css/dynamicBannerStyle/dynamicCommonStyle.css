@@ -1,0 +1,81 @@
+.dynamicBanner {
+    width: 100vw;
+}
+
+/* 세로 / 가로  */
+
+.sections {
+    /* max-width: 1100px;
+    margin: auto; */
+    display: block;
+    width: 100%;
+    height: calc(100vw * 4 / 9);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.mobileSections {
+    display: none;
+    width: 100%;
+    height: calc(100vw * 5 / 4);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.DB4Division {
+    /* max-width: 1100px;
+    margin: auto; */
+    width: 100%;
+    /* 세로 / 가로 */
+    height: calc(100vw * 1 / 2);
+    display: flex;
+    flex-wrap: wrap;
+    background-color: gray;
+}
+
+.division {
+    display: block;
+    /* 2 columns */
+    width: 50%; 
+    /* 2 rows */
+    height: 50%; 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.mobileDivision {
+    display: none;
+    /* 1 column */
+    width: 100%;
+    /* 4 rows */
+    height: 25%; 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* @media (max-width: 768px) { */
+@media (max-width: 600px) {
+    .sections {
+        display: none;
+    }
+    
+    .mobileSections {
+        display: block;
+    }
+
+    .division {
+        display: none;
+    }
+    
+    .DB4Division {
+        height: calc(100vw * 4 / 1);
+    }
+
+    .mobileDivision {
+        display: block;
+    }
+}

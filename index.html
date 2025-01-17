@@ -1,1 +1,781 @@
-hello
+<!-- <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>우림푸드</title>
+        <link rel="stylesheet" href="./resources/css/mainPageStyle/globalSettingStyle.css" />
+        <link rel="stylesheet" href="./resources/css/mainPageStyle/mainBannerStyle.css" />
+        <link rel="stylesheet" href="./resources/css/mainPageStyle/introStyle.css" />
+        <link rel="stylesheet" href="./resources/css/carouselStyle/menuCarouselStyle.css" />
+        <link rel="stylesheet" href="./resources/css/carouselStyle/franchiseCarouselStyle.css" />
+        <link rel="stylesheet" href="./resources/css/carouselStyle/commonCarouselStyle.css" />
+        <link rel="stylesheet" href="./resources/css/mainPageStyle/footerStyle.css" />
+        <link rel="stylesheet" href="./resources/css/mainPageStyle/contactModalStyle.css" />
+        <link rel="stylesheet" href="./resources/css/mainPageStyle/contactFormStyle.css" />
+        <link rel="stylesheet" href="./resources/css/mainPageStyle/hiddenButtonStyle.css" />
+        <link rel="stylesheet" href="./resources/css/dynamicBannerStyle/dynamicCommonStyle.css" />
+        <link rel="stylesheet" href="./resources/css/mainPageStyle/scrollMenu.css" />
+        <link rel="stylesheet" href="./resources/css/mainPageStyle/moreButtonStyle.css" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper/swiper-bundle.min.css"
+        />
+        <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <a class="goAdmin" href="authCodePopup.do"></a>
+        <div class="introWrapper">
+        <!-- <div class="introWrapper" style="display: none;"> -->
+            <!-- test: display:none  -->
+            <div class="introImgWrapper">
+                <div
+                    class="introImg"
+                    style="
+                        background-image: url(./resources/img/woolim_only_logo.png);
+                        background-repeat: no-repeat;
+                        background-size: fit;
+                        background-position: center;
+                    "
+                >
+                <!-- <img src="./resources/img/woolim_only_logo.png" alt=""> -->
+                </div>
+            </div>
+        </div>
+        <!-- mainBanner -->
+        <div class="mainBanner">
+            <div class="bannerItem" style="width: 100%;
+                height: 100vh;
+                background-image: url(./resources/img/main_slider_04.jpg);
+                background-color: #dddddd;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;"></div>
+        </div>
+        <nav class="floating-nav">
+            <ul>
+                <li><a href="#why" class="nav-link">왜 우림칼국수인가?</a></li>
+                <li><a href="#join" class="nav-link">가맹절차</a></li>
+                <li><a href="#story" class="nav-link">우림스토리</a></li>
+                <li><a href="#greeting" class="nav-link">인사말</a></li>
+                <li><a href="#franchise" class="nav-link">가맹점</a></li>
+                <li><a href="#menu" class="nav-link">메뉴</a></li>
+                <li><a href="#contact" class="nav-link">문의</a></li>
+            </ul>
+        </nav>
+        <div class="dynamicBanner">
+            <!-- 데스크탑 버전 -->
+            <div class="sections" id="why" style="background-image: url(./resources/img/mainSection1.png);"></div>
+            <div class="sections" id="join" style="background-image: url(./resources/img/mainSection2.png);"></div>
+            <div class="sections" id="story" style="background-image: url(./resources/img/mainSection3.png);"></div>
+            <!-- 모바일 버전 -->
+            <div class="mobileSections" id="why" style="background-image: url(./resources/img/mobilemainSection1.png);"></div>
+            <div class="mobileSections" id="join" style="background-image: url(./resources/img/mobilemainSection2.png);"></div>
+            <div class="mobileSections" id="story" style="background-image: url(./resources/img/mobilemainSection3.png);"></div>
+            <!-- 4분할  -->
+            <div class="DB4Division" id="greeting">
+                <!-- id="greeting" -> scrollMenu를 위한 것 -->
+                <!-- 데스크탑 버전 -->
+                <div class="division" style="background-image: url(./resources/img/woolimSection1.png);"></div>
+                <div class="division" style="background-image: url(./resources/img/woolimSection2.png);"></div>
+                <div class="division" style="background-image: url(./resources/img/woolimSection4.png);"></div>
+                <div class="division" style="background-image: url(./resources/img/woolimSection3.png);"></div>
+                <!-- 모바일 버전 -->
+                <div class="mobileDivision" style="background-image: url(./resources/img/mobileWoolim1.png);"></div>
+                <div class="mobileDivision" style="background-image: url(./resources/img/mobileWoolim2.png);"></div>
+                <div class="mobileDivision" style="background-image: url(./resources/img/mobileWoolim3.png);"></div>
+                <div class="mobileDivision" style="background-image: url(./resources/img/mobileWoolim4.png);"></div>
+            </div>
+        </div>
+        <div class="addmargin"></div>
+        <div class="mainWrapper">
+            <div class="franchiseWrapper" id="franchise">
+                <!-- id="franchise" -> scrollMenu를 위한 것 -->
+                <div class="carouselWrapper" id="franchiseCarouselView">
+                    <div class="swiper-container franchiseSwiper" id="carousel-container">
+                        <div class="swiper-wrapper">
+                            <!-- 프랜차이즈 캐러셀 반복 시작 -->
+                            <!-- <c:forEach  items="${franchise_list}" var="woolimFood"> -->
+                                <div class="swiper-slide franchiseSlide">
+                                    <!-- 프랜차이즈 이미지 -->
+                                    <div
+                                        class="franchiseImg"
+                                        style="
+                                            background-image: url(./resources/img/main_slider_02.jpg);                                            
+                                            background-color: #dddddd;
+                                            background-repeat: no-repeat;
+                                            background-size: cover;
+                                            background-position: center;
+                                            "
+                                    ></div>
+                                    <!-- background-image: url(./resources/franchiseIMG/${woolimFood.franchiseImg});                                             -->
+                                    <!-- 프랜차이즈 지점 이름 -->
+                                    <!-- <div class="franchiseTitle">${woolimFood.franchisePlaceName}</div> -->
+                                    <div class="franchiseTitle">천안 안서점</div>
+                                    <!-- 프랜차이즈 지점 주소 -->
+                                    <!-- <div class="franchiseBody expandable">${woolimFood.franchiseAddress}</div> -->
+                                    <div class="franchiseBody expandable">천안시 안서동 홍영읍 이동로 213</div>
+                                    <!-- 프랜차이즈 번호 -->
+                                    <!-- <div class="franchiseBody textLast">${woolimFood.franchiseNum}</div> -->
+                                    <div class="franchiseBody textLast">031-2222-2222</div>
+                                </div>
+                                <div class="swiper-slide franchiseSlide">
+                                    <!-- 프랜차이즈 이미지 -->
+                                    <div
+                                        class="franchiseImg"
+                                        style="
+                                            background-image: url(./resources/img/main_slider_02.jpg);                                            
+                                            background-color: #dddddd;
+                                            background-repeat: no-repeat;
+                                            background-size: cover;
+                                            background-position: center;
+                                            "
+                                    ></div>
+                                    <!-- background-image: url(./resources/franchiseIMG/${woolimFood.franchiseImg});                                             -->
+                                    <!-- 프랜차이즈 지점 이름 -->
+                                    <!-- <div class="franchiseTitle">${woolimFood.franchisePlaceName}</div> -->
+                                    <div class="franchiseTitle">천안 안서점</div>
+                                    <!-- 프랜차이즈 지점 주소 -->
+                                    <!-- <div class="franchiseBody expandable">${woolimFood.franchiseAddress}</div> -->
+                                    <div class="franchiseBody expandable">천안시 안서동 홍영읍 이동로 213</div>
+                                    <!-- 프랜차이즈 번호 -->
+                                    <!-- <div class="franchiseBody textLast">${woolimFood.franchiseNum}</div> -->
+                                    <div class="franchiseBody textLast">031-2222-2222</div>
+                                </div>
+                                <div class="swiper-slide franchiseSlide">
+                                    <!-- 프랜차이즈 이미지 -->
+                                    <div
+                                        class="franchiseImg"
+                                        style="
+                                            background-image: url(./resources/img/main_slider_02.jpg);                                            
+                                            background-color: #dddddd;
+                                            background-repeat: no-repeat;
+                                            background-size: cover;
+                                            background-position: center;
+                                            "
+                                    ></div>
+                                    <!-- background-image: url(./resources/franchiseIMG/${woolimFood.franchiseImg});                                             -->
+                                    <!-- 프랜차이즈 지점 이름 -->
+                                    <!-- <div class="franchiseTitle">${woolimFood.franchisePlaceName}</div> -->
+                                    <div class="franchiseTitle">천안 안서점</div>
+                                    <!-- 프랜차이즈 지점 주소 -->
+                                    <!-- <div class="franchiseBody expandable">${woolimFood.franchiseAddress}</div> -->
+                                    <div class="franchiseBody expandable">천안시 안서동 홍영읍 이동로 213</div>
+                                    <!-- 프랜차이즈 번호 -->
+                                    <!-- <div class="franchiseBody textLast">${woolimFood.franchiseNum}</div> -->
+                                    <div class="franchiseBody textLast">031-2222-2222</div>
+                                </div>
+                                <div class="swiper-slide franchiseSlide">
+                                    <!-- 프랜차이즈 이미지 -->
+                                    <div
+                                        class="franchiseImg"
+                                        style="
+                                            background-image: url(./resources/img/main_slider_02.jpg);                                            
+                                            background-color: #dddddd;
+                                            background-repeat: no-repeat;
+                                            background-size: cover;
+                                            background-position: center;
+                                            "
+                                    ></div>
+                                    <!-- background-image: url(./resources/franchiseIMG/${woolimFood.franchiseImg});                                             -->
+                                    <!-- 프랜차이즈 지점 이름 -->
+                                    <!-- <div class="franchiseTitle">${woolimFood.franchisePlaceName}</div> -->
+                                    <div class="franchiseTitle">천안 안서점</div>
+                                    <!-- 프랜차이즈 지점 주소 -->
+                                    <!-- <div class="franchiseBody expandable">${woolimFood.franchiseAddress}</div> -->
+                                    <div class="franchiseBody expandable">천안시 안서동 홍영읍 이동로 213</div>
+                                    <!-- 프랜차이즈 번호 -->
+                                    <!-- <div class="franchiseBody textLast">${woolimFood.franchiseNum}</div> -->
+                                    <div class="franchiseBody textLast">031-2222-2222</div>
+                                </div>
+                                <div class="swiper-slide franchiseSlide">
+                                    <!-- 프랜차이즈 이미지 -->
+                                    <div
+                                        class="franchiseImg"
+                                        style="
+                                            background-image: url(./resources/img/main_slider_02.jpg);                                            
+                                            background-color: #dddddd;
+                                            background-repeat: no-repeat;
+                                            background-size: cover;
+                                            background-position: center;
+                                            "
+                                    ></div>
+                                    <!-- background-image: url(./resources/franchiseIMG/${woolimFood.franchiseImg});                                             -->
+                                    <!-- 프랜차이즈 지점 이름 -->
+                                    <!-- <div class="franchiseTitle">${woolimFood.franchisePlaceName}</div> -->
+                                    <div class="franchiseTitle">천안 안서점</div>
+                                    <!-- 프랜차이즈 지점 주소 -->
+                                    <!-- <div class="franchiseBody expandable">${woolimFood.franchiseAddress}</div> -->
+                                    <div class="franchiseBody expandable">천안시 안서동 홍영읍 이동로 213</div>
+                                    <!-- 프랜차이즈 번호 -->
+                                    <!-- <div class="franchiseBody textLast">${woolimFood.franchiseNum}</div> -->
+                                    <div class="franchiseBody textLast">031-2222-2222</div>
+                                </div>
+                                <div class="swiper-slide franchiseSlide">
+                                    <!-- 프랜차이즈 이미지 -->
+                                    <div
+                                        class="franchiseImg"
+                                        style="
+                                            background-image: url(./resources/img/main_slider_02.jpg);                                            
+                                            background-color: #dddddd;
+                                            background-repeat: no-repeat;
+                                            background-size: cover;
+                                            background-position: center;
+                                            "
+                                    ></div>
+                                    <!-- background-image: url(./resources/franchiseIMG/${woolimFood.franchiseImg});                                             -->
+                                    <!-- 프랜차이즈 지점 이름 -->
+                                    <!-- <div class="franchiseTitle">${woolimFood.franchisePlaceName}</div> -->
+                                    <div class="franchiseTitle">천안 안서점</div>
+                                    <!-- 프랜차이즈 지점 주소 -->
+                                    <!-- <div class="franchiseBody expandable">${woolimFood.franchiseAddress}</div> -->
+                                    <div class="franchiseBody expandable">천안시 안서동 홍영읍 이동로 213</div>
+                                    <!-- 프랜차이즈 번호 -->
+                                    <!-- <div class="franchiseBody textLast">${woolimFood.franchiseNum}</div> -->
+                                    <div class="franchiseBody textLast">031-2222-2222</div>
+                                </div>
+                            <!-- </c:forEach> -->
+                        </div>
+                        <div class="swiper-button-controls">
+                            <div class="swiper-button-prev" id="franchisePrev"></div>
+                            <div class="swiper-button-next" id="franchiseNext"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="show-more-container">
+                    <div class="gradient-line"></div>
+                    <button class="show-more-button" id="showMoreFranchiseBtn">
+                        <span class="show-more-franchise-text">더보기</span>
+                        <svg class="arrow-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9l6 6 6-6"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div
+                class="franchiseListWrapper"
+                id="franchiseListView"
+                style="display: none"
+                >
+                <div class="franchiseList">
+                    <!-- 프랜차이즈 리스트 반복 시작 -->
+                    <!-- <c:forEach  items="${franchise_list}" var="woolimFood"> -->
+                        <div class="franchiseListItem">
+                            <!-- 프랜차이즈 이미지 -->
+                            <div
+                                class="franchiseImg"
+                                
+                                style="
+                                    background-image: url(./resources/img/main_slider_03.jpg);
+                                    background-color: #dddddd;
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                    background-position: center;
+                                    "
+                            ></div>
+                            <!-- background-image: url(./resources/franchiseIMG/${woolimFood.franchiseImg}); -->
+                            <!-- 프랜차이즈 지점 이름 -->
+                            <!-- <div class="franchiseTitle">${woolimFood.franchisePlaceName}</div> -->
+                            <div class="franchiseTitle">천안 안서점</div>
+                            <!-- 프랜차이즈 지점 주소 -->
+                            <!-- <div class="franchiseBody expandable">${woolimFood.franchiseAddress}</div> -->
+                            <div class="franchiseBody expandable">천안시 동남구 오용동 구구로 123</div>
+                            <!-- 프랜차이즈 지점 번호 -->
+                            <!-- <div class="franchiseBody textLast">${woolimFood.franchiseNum}</div> -->
+                            <div class="franchiseBody textLast">031-2222-2222</div>
+                        </div>
+                        <div class="franchiseListItem">
+                            <!-- 프랜차이즈 이미지 -->
+                            <div
+                                class="franchiseImg"
+                                
+                                style="
+                                    background-image: url(./resources/img/main_slider_03.jpg);
+                                    background-color: #dddddd;
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                    background-position: center;
+                                    "
+                            ></div>
+                            <!-- background-image: url(./resources/franchiseIMG/${woolimFood.franchiseImg}); -->
+                            <!-- 프랜차이즈 지점 이름 -->
+                            <!-- <div class="franchiseTitle">${woolimFood.franchisePlaceName}</div> -->
+                            <div class="franchiseTitle">천안 안서점</div>
+                            <!-- 프랜차이즈 지점 주소 -->
+                            <!-- <div class="franchiseBody expandable">${woolimFood.franchiseAddress}</div> -->
+                            <div class="franchiseBody expandable">천안시 동남구 오용동 구구로 123</div>
+                            <!-- 프랜차이즈 지점 번호 -->
+                            <!-- <div class="franchiseBody textLast">${woolimFood.franchiseNum}</div> -->
+                            <div class="franchiseBody textLast">031-2222-2222</div>
+                        </div>
+                        <div class="franchiseListItem">
+                            <!-- 프랜차이즈 이미지 -->
+                            <div
+                                class="franchiseImg"
+                                
+                                style="
+                                    background-image: url(./resources/img/main_slider_03.jpg);
+                                    background-color: #dddddd;
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                    background-position: center;
+                                    "
+                            ></div>
+                            <!-- background-image: url(./resources/franchiseIMG/${woolimFood.franchiseImg}); -->
+                            <!-- 프랜차이즈 지점 이름 -->
+                            <!-- <div class="franchiseTitle">${woolimFood.franchisePlaceName}</div> -->
+                            <div class="franchiseTitle">천안 안서점</div>
+                            <!-- 프랜차이즈 지점 주소 -->
+                            <!-- <div class="franchiseBody expandable">${woolimFood.franchiseAddress}</div> -->
+                            <div class="franchiseBody expandable">천안시 동남구 오용동 구구로 123</div>
+                            <!-- 프랜차이즈 지점 번호 -->
+                            <!-- <div class="franchiseBody textLast">${woolimFood.franchiseNum}</div> -->
+                            <div class="franchiseBody textLast">031-2222-2222</div>
+                        </div>
+                        <div class="franchiseListItem">
+                            <!-- 프랜차이즈 이미지 -->
+                            <div
+                                class="franchiseImg"
+                                
+                                style="
+                                    background-image: url(./resources/img/main_slider_03.jpg);
+                                    background-color: #dddddd;
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                    background-position: center;
+                                    "
+                            ></div>
+                            <!-- background-image: url(./resources/franchiseIMG/${woolimFood.franchiseImg}); -->
+                            <!-- 프랜차이즈 지점 이름 -->
+                            <!-- <div class="franchiseTitle">${woolimFood.franchisePlaceName}</div> -->
+                            <div class="franchiseTitle">천안 안서점</div>
+                            <!-- 프랜차이즈 지점 주소 -->
+                            <!-- <div class="franchiseBody expandable">${woolimFood.franchiseAddress}</div> -->
+                            <div class="franchiseBody expandable">천안시 동남구 오용동 구구로 123</div>
+                            <!-- 프랜차이즈 지점 번호 -->
+                            <!-- <div class="franchiseBody textLast">${woolimFood.franchiseNum}</div> -->
+                            <div class="franchiseBody textLast">031-2222-2222</div>
+                        </div>
+                        <div class="franchiseListItem">
+                            <!-- 프랜차이즈 이미지 -->
+                            <div
+                                class="franchiseImg"
+                                
+                                style="
+                                    background-image: url(./resources/img/main_slider_03.jpg);
+                                    background-color: #dddddd;
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                    background-position: center;
+                                    "
+                            ></div>
+                            <!-- background-image: url(./resources/franchiseIMG/${woolimFood.franchiseImg}); -->
+                            <!-- 프랜차이즈 지점 이름 -->
+                            <!-- <div class="franchiseTitle">${woolimFood.franchisePlaceName}</div> -->
+                            <div class="franchiseTitle">천안 안서점</div>
+                            <!-- 프랜차이즈 지점 주소 -->
+                            <!-- <div class="franchiseBody expandable">${woolimFood.franchiseAddress}</div> -->
+                            <div class="franchiseBody expandable">천안시 동남구 오용동 구구로 123</div>
+                            <!-- 프랜차이즈 지점 번호 -->
+                            <!-- <div class="franchiseBody textLast">${woolimFood.franchiseNum}</div> -->
+                            <div class="franchiseBody textLast">031-2222-2222</div>
+                        </div>
+                        <div class="franchiseListItem">
+                            <!-- 프랜차이즈 이미지 -->
+                            <div
+                                class="franchiseImg"
+                                
+                                style="
+                                    background-image: url(./resources/img/main_slider_03.jpg);
+                                    background-color: #dddddd;
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                    background-position: center;
+                                    "
+                            ></div>
+                            <!-- background-image: url(./resources/franchiseIMG/${woolimFood.franchiseImg}); -->
+                            <!-- 프랜차이즈 지점 이름 -->
+                            <!-- <div class="franchiseTitle">${woolimFood.franchisePlaceName}</div> -->
+                            <div class="franchiseTitle">천안 안서점</div>
+                            <!-- 프랜차이즈 지점 주소 -->
+                            <!-- <div class="franchiseBody expandable">${woolimFood.franchiseAddress}</div> -->
+                            <div class="franchiseBody expandable">천안시 동남구 오용동 구구로 123</div>
+                            <!-- 프랜차이즈 지점 번호 -->
+                            <!-- <div class="franchiseBody textLast">${woolimFood.franchiseNum}</div> -->
+                            <div class="franchiseBody textLast">031-2222-2222</div>
+                        </div>
+                        <!-- 반복문 종료 -->
+                    <!-- </c:forEach> -->
+                </div>
+            </div>
+            </div>
+            <div class="addmargin"></div>
+            <!-- id="menu" -> scrollMenu 위한 것 -->
+            <div class="foodWrapper" id="menu">
+                <div class="carouselWrapper" id="carouselView">
+                    <div class="swiper-container menuSwiper" id="carousel-container">
+                        <div class="swiper-wrapper">
+                            <!-- 메뉴 캐러셀 반복문 시작 -->
+                            <!-- <c:forEach  items="${menu_list}" var="woolimFood"> -->
+                                <div class="swiper-slide menuSlide">
+                                    <!-- 메뉴 이미지 -->
+                                    <img
+                                    class="menuImg"
+                                    draggable="false"
+                                    src="./resources/img/main_slider_04.jpg"
+                                    />
+                                    <!-- src="./resources/menuIMG/${woolimFood.menuIMG}" -->
+                                    <!-- 메뉴 이름 -->
+                                    <!-- <div class="carouselMenuTitle">${woolimFood.menuName}</div> -->
+                                    <div class="carouselMenuTitleWrapper">
+                                        <div class="carouselMenuTitle">칼국수</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide menuSlide">
+                                    <!-- 메뉴 이미지 -->
+                                    <img
+                                    class="menuImg"
+                                    draggable="false"
+                                    src="./resources/img/main_slider_04.jpg"
+                                    />
+                                    <!-- src="./resources/menuIMG/${woolimFood.menuIMG}" -->
+                                    <!-- 메뉴 이름 -->
+                                    <!-- <div class="carouselMenuTitle">${woolimFood.menuName}</div> -->
+                                    <div class="carouselMenuTitleWrapper">
+                                        <div class="carouselMenuTitle">칼국수</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide menuSlide">
+                                    <!-- 메뉴 이미지 -->
+                                    <img
+                                    class="menuImg"
+                                    draggable="false"
+                                    src="./resources/img/main_slider_04.jpg"
+                                    />
+                                    <!-- src="./resources/menuIMG/${woolimFood.menuIMG}" -->
+                                    <!-- 메뉴 이름 -->
+                                    <!-- <div class="carouselMenuTitle">${woolimFood.menuName}</div> -->
+                                    <div class="carouselMenuTitleWrapper">
+                                        <div class="carouselMenuTitle">칼국수</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide menuSlide">
+                                    <!-- 메뉴 이미지 -->
+                                    <img
+                                    class="menuImg"
+                                    draggable="false"
+                                    src="./resources/img/main_slider_04.jpg"
+                                    />
+                                    <!-- src="./resources/menuIMG/${woolimFood.menuIMG}" -->
+                                    <!-- 메뉴 이름 -->
+                                    <!-- <div class="carouselMenuTitle">${woolimFood.menuName}</div> -->
+                                    <div class="carouselMenuTitleWrapper">
+                                        <div class="carouselMenuTitle">칼국수</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide menuSlide">
+                                    <!-- 메뉴 이미지 -->
+                                    <img
+                                    class="menuImg"
+                                    draggable="false"
+                                    src="./resources/img/main_slider_04.jpg"
+                                    />
+                                    <!-- src="./resources/menuIMG/${woolimFood.menuIMG}" -->
+                                    <!-- 메뉴 이름 -->
+                                    <!-- <div class="carouselMenuTitle">${woolimFood.menuName}</div> -->
+                                    <div class="carouselMenuTitleWrapper">
+                                        <div class="carouselMenuTitle">칼국수</div>
+                                    </div>
+                                </div>
+                            <!-- </c:forEach> -->
+                        <!-- 반복문 종료 -->
+                        </div>
+                        <div class="swiper-button-controls">
+                            <div class="swiper-button-prev" id="prev"></div>
+                            <div class="swiper-button-next" id="next"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="moreButton" id="menuMoreButton" style="text-align: center; color: #999; cursor: pointer;">
+                    ------------------------- 더보기 -------------------------
+                </div> -->
+                <div class="show-more-container">
+                    <div class="gradient-line"></div>
+                    <button class="show-more-button" id="showMoreBtn">
+                        <span class="show-more-text">더보기</span>
+                        <svg class="arrow-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9l6 6 6-6"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div
+                class="menuListWrapper"
+                id="listView"
+                style="display: none"
+                >
+                <div class="menuList">
+                    <!-- 메뉴 리스트 항목 반복 시작 -->
+                    <!-- <c:forEach  items="${menu_list}" var="woolimFood"> -->
+                        <div class="menuListItem">
+                            <!-- 메뉴 이미지 -->
+                            <img
+                                draggable="false"
+                                src="./resources/img/main_slider_05-3.jpg"
+                                />
+                                <!-- src="./resources/menuIMG/${woolimFood.menuIMG}" -->
+                                <!-- 메뉴 이름 -->
+                                <!-- <div class="menuTitle">${woolimFood.menuName}</div> -->
+                                <div class="menuTitle">칼국수</div>
+                                <!-- 메뉴 설명 -->
+                                <!-- <div class="menuBody expandable textLast">${woolimFood.menuSummary}</div>                                 -->
+                                <div class="menuBody expandable textLast">조개육수로 칼국수를 만든 진국 꿀맛 칼국수</div>                                
+                        </div>
+                        <div class="menuListItem">
+                            <!-- 메뉴 이미지 -->
+                            <img
+                                draggable="false"
+                                src="./resources/img/main_slider_05-3.jpg"
+                                />
+                                <!-- src="./resources/menuIMG/${woolimFood.menuIMG}" -->
+                                <!-- 메뉴 이름 -->
+                                <!-- <div class="menuTitle">${woolimFood.menuName}</div> -->
+                                <div class="menuTitle">칼국수</div>
+                                <!-- 메뉴 설명 -->
+                                <!-- <div class="menuBody expandable textLast">${woolimFood.menuSummary}</div>                                 -->
+                                <div class="menuBody expandable textLast">조개육수로 칼국수를 만든 진국 꿀맛 칼국수</div>                                
+                        </div>
+                        <div class="menuListItem">
+                            <!-- 메뉴 이미지 -->
+                            <img
+                                draggable="false"
+                                src="./resources/img/main_slider_05-3.jpg"
+                                />
+                                <!-- src="./resources/menuIMG/${woolimFood.menuIMG}" -->
+                                <!-- 메뉴 이름 -->
+                                <!-- <div class="menuTitle">${woolimFood.menuName}</div> -->
+                                <div class="menuTitle">칼국수</div>
+                                <!-- 메뉴 설명 -->
+                                <!-- <div class="menuBody expandable textLast">${woolimFood.menuSummary}</div>                                 -->
+                                <div class="menuBody expandable textLast">조개육수로 칼국수를 만든 진국 꿀맛 칼국수</div>                                
+                        </div>
+                        <div class="menuListItem">
+                            <!-- 메뉴 이미지 -->
+                            <img
+                                draggable="false"
+                                src="./resources/img/main_slider_05-3.jpg"
+                                />
+                                <!-- src="./resources/menuIMG/${woolimFood.menuIMG}" -->
+                                <!-- 메뉴 이름 -->
+                                <!-- <div class="menuTitle">${woolimFood.menuName}</div> -->
+                                <div class="menuTitle">칼국수</div>
+                                <!-- 메뉴 설명 -->
+                                <!-- <div class="menuBody expandable textLast">${woolimFood.menuSummary}</div>                                 -->
+                                <div class="menuBody expandable textLast">조개육수로 칼국수를 만든 진국 꿀맛 칼국수</div>                                
+                        </div>
+                        <div class="menuListItem">
+                            <!-- 메뉴 이미지 -->
+                            <img
+                                draggable="false"
+                                src="./resources/img/main_slider_05-3.jpg"
+                                />
+                                <!-- src="./resources/menuIMG/${woolimFood.menuIMG}" -->
+                                <!-- 메뉴 이름 -->
+                                <!-- <div class="menuTitle">${woolimFood.menuName}</div> -->
+                                <div class="menuTitle">칼국수</div>
+                                <!-- 메뉴 설명 -->
+                                <!-- <div class="menuBody expandable textLast">${woolimFood.menuSummary}</div>                                 -->
+                                <div class="menuBody expandable textLast">조개육수로 칼국수를 만든 진국 꿀맛 칼국수</div>                                
+                        </div>
+                        <div class="menuListItem">
+                            <!-- 메뉴 이미지 -->
+                            <img
+                                draggable="false"
+                                src="./resources/img/main_slider_05-3.jpg"
+                                />
+                                <!-- src="./resources/menuIMG/${woolimFood.menuIMG}" -->
+                                <!-- 메뉴 이름 -->
+                                <!-- <div class="menuTitle">${woolimFood.menuName}</div> -->
+                                <div class="menuTitle">칼국수</div>
+                                <!-- 메뉴 설명 -->
+                                <!-- <div class="menuBody expandable textLast">${woolimFood.menuSummary}</div>                                 -->
+                                <div class="menuBody expandable textLast">조개육수로 칼국수를 만든 진국 꿀맛 칼국수</div>                                
+                        </div>
+                    <!-- </c:forEach> -->
+                </div>
+            </div>
+            </div>
+            <div class="addmargin"></div>
+        </div>
+            <div class="form-container">
+                <div class="form-background-image" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('./resources/img/main_slider_04.jpg') center/cover;"></div>
+                <div class="form-content">
+                    <div class="form-title">
+                        <h1>창업 문의</h1>
+                        <p>바로 지금, 창업의 성공을<br>빠르게 실현하세요</p>
+                    </div>
+                    <form id="consultationForm" action="askSendMail.do">
+                        <div class="form-group">
+                            <label for="name">이름</label>
+                            <input type="text" id="name" name="name" required style="outline: none;">
+                        </div>
+                        <div class="form-group">
+                            <label id="contact" for="phone">연락처</label>
+                            <!-- id="contact" -> scrollMenu 위한것 -->
+                            <input type="text" id="phone" name="phone" required style="outline: none;">
+                        </div>
+                         <div class="form-group">
+                            <label for="hopefulAear">창업희망지역</label>
+                            <input type="text" id="hopefulAear" name="hopefulAear" required style="outline: none;">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">내용</label>
+                            <textarea id="message" name="message" required style="outline: none;"></textarea>
+                        </div>
+                        <div class="formcheckboxWrapper">
+                            <div class="formcheckboxContainer">
+                                개인정보수집동의
+                                <input class="formmodalCheckBox" id="checkInform" type="checkbox">
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-btn">창업 상담 신청하기</button>
+                    </form>
+                </div>
+            </div>
+            <!-- test -->
+            <div class="footerWrapper">
+                <header class="header">
+                    <div class="logo">
+                        <!-- <img src="planfood-logo.png" alt="PlanFood"> -->
+                        <!-- <img src="./src/img/woolim_only_logo.png" alt="PlanFood"> -->
+                        <img src="./resources/img/woolim_logo.png" alt="PlanFood">
+                    </div>
+                            <!-- Footer Form Modal -->
+                    <div class="footer-form-modal" id="footerFormModal">
+                        <div class="form-container">
+                            <p class="modalTitle">가맹점 문의</p>
+                            <form id="modalConsultationForm" class="modal-form">
+                                <div class="input-container">
+                                    <input type="text" id="name" name="name" placeholder="성함" required>
+                                    <input type="text" id="phone" name="phone" placeholder="연락처" required>
+                                    <input type="text" id="hopefulAear" name="hopefulAear" placeholder="창업희망지역" required>
+                                </div>
+                                <textarea class="inputContext" name="message" id="message" placeholder="내용" required></textarea>
+                                <div class="checkboxWrapper">
+                                    <div class="checkboxContainer">
+                                        개인정보수집동의
+                                        <input class="modalCheckBox" id="checkInform" type="checkbox" required>
+                                    </div>
+                                </div>
+                                <button class="submit-btn">상담 신청하기</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="social-icons">
+                        <button class="footer-form-button material-symbols-outlined" id="footerFormButton">call</button>
+                        <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="naver">N</a>
+                        <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="kakao">K</a>
+                        <a href="#" class="twitter"><i class="fab fa-twitter material-symbols-outlined">share</i></a>
+                    </div>
+                </header>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">이용약관</a></li>
+                    </ul>
+                </nav>
+                <footer class="footer-info">
+                    <!-- <div class="footer-logos">
+                        <img src="./src/img/woolim_only_logo.png" alt="logo1">
+                    </div> -->
+                    <!-- <p>(주)프랜푸드 대표자: 목채석</p> -->
+                    <!-- <p>사업자등록번호: 503-81-75746</p> -->
+                    <!-- <p>주소: 대구광역시 동구 팔공로 220-2 (봉무동 1570-1)</p> -->
+                    <!-- <p>E-Mail: ttangttang@codd.co.kr</p> -->
+                    <!-- <p>FAX: 053-354-2627</p> -->
+                    <!-- <p>창업문의: 080-356-3664</p> -->
+                    <!-- <p>상담가능시간: AM 09:00 - PM 18:00 (월-금)</p> -->
+                    <!-- <p>COPYRIGHT(c) 2024 PlanFood ALL RIGHTS RESERVED.</p> -->
+                    <div class="footer-info-container">
+                        <p>(주)우림푸드 대표자: OOO</p>
+                        <p>사업자등록번호: OOO-OO-OOOOO</p>
+                    </div>
+                    <div class="footer-info-container">
+                        <p>주소: 충북 청주시 흥덕구 오송읍 쌍청2길 5. 2호</p>
+                        <p>창업문의: 1577-9847</p>
+                    </div>
+                    <p class="bold">Copyright © 2018 우림푸드 All Rights Reserved.</p>
+                </footer>
+            </div>
+
+        <script src="./resources/js/mainJs/swiperSetUp.js"></script>
+        <script src="./resources/js/mainJs/openComponent.js?v=<%=System.currentTimeMillis() %>"></script>
+        <script src="./resources/js/mainJs/introFun.js"></script>
+        <script src="./resources/js/mainJs/scrollMenu.js"></script>
+        <!-- <script src="./resources/js/mainJs/footerFun.js"></script> -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const expandableElements = document.querySelectorAll('.expandable');
+                expandableElements.forEach(el => {
+                    const originalText = el.innerText;
+                    if (originalText.length > 28) {
+                        const truncatedText = originalText.substring(0, 28) + '...';
+                        el.innerText = truncatedText;
+                        el.classList.add('collapsed');
+                        el.addEventListener('click', () => {
+                            if (el.classList.contains('collapsed')) {
+                                el.innerText = originalText;
+                                el.classList.remove('collapsed');
+                                el.style.whiteSpace = 'normal';
+                            } else {
+                                el.innerText = truncatedText;
+                                el.classList.add('collapsed');
+                                el.style.whiteSpace = 'nowrap';
+                            }
+                        });
+                    }
+                });
+
+                const socialIcons = document.querySelector('.social-icons');
+                const fixedIcon = socialIcons.querySelector('a:last-child');
+                fixedIcon.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    socialIcons.classList.toggle('expanded');
+                });
+
+                const footerFormButton = document.getElementById('footerFormButton');
+                const footerFormModal = document.getElementById('footerFormModal');
+
+                footerFormButton.addEventListener('click', () => {
+                    footerFormModal.style.display = 'flex';
+                });
+
+                footerFormModal.addEventListener('click', (event) => {
+                    if (event.target === footerFormModal) {
+                        footerFormModal.style.display = 'none';
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

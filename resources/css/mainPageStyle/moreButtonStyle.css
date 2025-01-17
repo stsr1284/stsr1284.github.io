@@ -1,0 +1,76 @@
+.show-more-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.gradient-line {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #e5e7eb, transparent);
+    margin-bottom: 1.5rem;
+}
+
+.show-more-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.show-more-button:hover {
+    transform: translateY(2px);
+}
+
+.show-more-text {
+    font-size: 0.875rem;
+    color: #6b7280;
+    transition: color 0.3s ease;
+}
+
+.show-more-franchise-text {
+    font-size: 0.875rem;
+    color: #6b7280;
+    transition: color 0.3s ease;
+}
+
+.show-more-button:hover .show-more-text {
+    color: #1f2937;
+}
+.show-more-button:hover .show-more-franchise-text {
+    color: #1f2937;
+}
+
+.arrow-icon {
+    width: 16px;
+    height: 16px;
+    transition: all 0.3s ease;
+    fill: #9ca3af;
+}
+
+.show-more-button:hover .arrow-icon {
+    fill: #4b5563;
+}
+
+/* 펼쳐진 상태의 스타일 */
+.show-more-button.expanded .arrow-icon {
+    transform: rotate(180deg);
+}
+
+/* 콘텐츠 영역 */
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.content.expanded {
+    max-height: 1000px; /* 실제 콘텐츠 높이에 맞게 조정 */
+    transition: max-height 0.5s ease-in;
+}

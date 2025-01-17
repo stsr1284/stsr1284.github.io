@@ -1,0 +1,50 @@
+.floating-nav {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.floating-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.floating-nav li {
+    margin: 10px 0;
+}
+
+.floating-nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    display: block;
+    transition: color 0.3s;
+}
+
+.floating-nav a:hover {
+    color: #007bff;
+}
+
+.floating-nav .active {
+    color: #007bff;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    .floating-nav {
+        display: none;
+        right: 10px;
+        padding: 10px;
+    }
+    
+    .floating-nav a {
+        font-size: 12px;
+    }
+}
