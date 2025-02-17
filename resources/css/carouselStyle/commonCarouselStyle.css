@@ -11,16 +11,20 @@
     align-items: center; */
     overflow-x: hidden;
     /* margin-bottom: 15px; */
+    background-color: #ffffff;
 }
 
 .swiper-container {
     width: 100%;
     padding : 5px 5px;
+    border: none;
+    background-color: #ffffff;
 }
 
 .swiper-slide {
     background: white;
     overflow: hidden;
+    border: none;
 }
 
 
@@ -123,6 +127,7 @@
 
 /* List Item Text Style */
 .menuTitle, .franchiseTitle {
+    font-family: 'Pretendard Variable', sans-serif;
     font-size: 1.3rem;
     font-weight: 700;
     padding: 15px;

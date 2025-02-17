@@ -1,58 +1,37 @@
 .introWrapper {
-    margin: 0;
-    padding: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    position:relative;
+    width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #ffffff;
     overflow: hidden;
-    /* background-color: white; */
-    background-color: #f0f0f0;
-    z-index: 1002;
 }
 
-.introImgWrapper {
-    width: 100%;
-    height: 100px;
-    margin-bottom: 100px;
+.introContainer {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
 }
 
 .introImg {
-    width: 100%;
-    height: 150px;
-    opacity: 0;
-    transform: scale(0);
-    animation: logoAnimation 3.5s forwards;
-}
-
-/* .logo {
     width: 100px;
-} */
+    height: 100px;
+    animation: logoAnimation 2.5s forwards;
+    z-index: 1001;
+}
 
 @keyframes logoAnimation {
     0% {
         opacity: 0;
         transform: scale(0);
     }
-    /* 20% {
-        opacity: 1;
-        transform: scale(0.2);
-    } */
-    60% {
-        opacity: 1;
-        transform: scale(10);
-    }
     100% {
         opacity: 1;
-        transform: scale(10);
+        transform: scale(8);
     }
 }
 
-@keyframes fadeOut {
+/* @keyframes fadeOut {
     0% {
         opacity: 1;
     }
@@ -64,4 +43,5 @@
 
 .introWrapper.fade-out {
     animation: fadeOut 1s forwards;
-}
+    animation-delay: 1s;
+} */

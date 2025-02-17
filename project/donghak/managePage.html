@@ -1,0 +1,502 @@
+<!-- <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Banner Management</title>
+        <link rel="stylesheet" href="../../resources/css/managePageStyle/managePageStyle.css" />
+        <!-- Link to your CSS file -->
+    </head>
+    <body>
+        <!--------------------------franchiseList--------------------------------->
+        <a href="main.do">메인 페이지</a>
+        <div class="manageBox">
+            <h1>메인페이지 이미지</h1>
+            <ul class="sectionList">
+	            	<!-- <c:forEach var="i" begin="0" end="7"> -->
+			           	<li class="sectionItem">
+			                <div class="sectionImg">               
+			                   <img src="../../resources/img/mainSection1.png" class="thumbnail" />
+							</div>
+							<form class="sectionAddForm" id="addImageForm" action="mainImgChange.do" method="post" enctype="multipart/form-data">
+                                    <select class="sectionSelections" name="" id="">
+                                        <c:choose>
+                                            <c:when test= "${i == 1}"><option>왜우림칼국수인가?</option></c:when>
+                                            <c:when test= "${i == 0}"><option>메인로고(IMG${i+1})</option></c:when>
+                                            <c:when test= "${i == 2}"><option>가맹절차(IMG${i+1})</option></c:when>
+                                            <c:when test= "${i == 3}"><option>우림스토리(IMG${i+1})</option></c:when>
+                                            <c:when test= "${i == 4}"><option>인사말1(IMG${i+1})</option></c:when>
+                                            <c:when test= "${i == 5}"><option>인사말2(IMG${i+1})</option></c:when>
+                                            <c:when test= "${i == 6}"><option>인사말3(IMG${i+1})</option></c:when>
+                                            <c:when test= "${i == 7}"><option>인사말4(IMG${i+1})</option></c:when>
+                                        </c:choose>
+                                    </select>
+									<div class="sectionAddFormBtns">
+										<input class="fileUploadBtn" type="file" name="uploadFile">
+										<input type="hidden" name="imgType" value="IMG${i+1}" id="imgType"> 
+										<button type="submit" class="sectionUpdateBtn">변경하기 </button>
+                                    </div>		
+							</form>
+						</li>
+			           	<li class="sectionItem">
+			                <div class="sectionImg">               
+			                   <img src="../../resources/img/mainSection2.png" class="thumbnail" />
+							</div>
+							<form class="sectionAddForm" id="addImageForm" action="mainImgChange.do" method="post" enctype="multipart/form-data">
+                                    <select class="sectionSelections" name="" id="">
+                                        <c:choose>
+                                            <c:when test= "${i == 2}"><option>가맹절차</option></c:when>
+                                            <c:when test= "${i == 1}"><option>왜우림칼국수인가?</option></c:when>
+                                            <c:when test= "${i == 0}"><option>메인로고(IMG${i+1})</option></c:when>
+                                            <c:when test= "${i == 3}"><option>우림스토리(IMG${i+1})</option></c:when>
+                                            <c:when test= "${i == 4}"><option>인사말1(IMG${i+1})</option></c:when>
+                                            <c:when test= "${i == 5}"><option>인사말2(IMG${i+1})</option></c:when>
+                                            <c:when test= "${i == 6}"><option>인사말3(IMG${i+1})</option></c:when>
+                                            <c:when test= "${i == 7}"><option>인사말4(IMG${i+1})</option></c:when>
+                                        </c:choose>
+                                    </select>
+									<div class="sectionAddFormBtns">
+										<input class="fileUploadBtn" type="file" name="uploadFile">
+										<input type="hidden" name="imgType" value="IMG${i+1}" id="imgType"> 
+										<button type="submit" class="sectionUpdateBtn">변경하기 </button>
+                                    </div>		
+							</form>
+						</li>
+			           	<li class="sectionItem">
+			                <div class="sectionImg">               
+			                   <img src="../../resources/img/mainSection3.png" class="thumbnail" />
+							</div>
+							<form class="sectionAddForm" id="addImageForm" action="mainImgChange.do" method="post" enctype="multipart/form-data">
+                                    <select class="sectionSelections" name="" id="">
+                                        <c:choose>
+                                            <c:when test= "${i == 3}"><option>우림스토리</option></c:when>
+                                            <c:when test= "${i == 1}"><option>왜우림칼국수인가?</option></c:when>
+                                            <c:when test= "${i == 0}"><option>메인로고(IMG${i+1})</option></c:when>
+                                            <c:when test= "${i == 2}"><option>가맹절차(IMG${i+1})</option></c:when>
+                                            <c:when test= "${i == 4}"><option>인사말1(IMG${i+1})</option></c:when>
+                                            <c:when test= "${i == 5}"><option>인사말2(IMG${i+1})</option></c:when>
+                                            <c:when test= "${i == 6}"><option>인사말3(IMG${i+1})</option></c:when>
+                                            <c:when test= "${i == 7}"><option>인사말4(IMG${i+1})</option></c:when>
+                                        </c:choose>
+                                    </select>
+									<div class="sectionAddFormBtns">
+										<input class="fileUploadBtn" type="file" name="uploadFile">
+										<input type="hidden" name="imgType" value="IMG${i+1}" id="imgType"> 
+										<button type="submit" class="sectionUpdateBtn">변경하기 </button>
+                                    </div>		
+							</form>
+						</li>
+			           	<li class="sectionItem">
+			                <div class="sectionImg">               
+			                   <img src="../../resources/img/mobileWoolim1.png" class="thumbnail" />
+							</div>
+							<form class="sectionAddForm" id="addImageForm" action="mainImgChange.do" method="post" enctype="multipart/form-data">
+                                    <select class="sectionSelections" name="" id="">
+                                        <c:choose>
+                                            <c:when test= "${i == 4}"><option>인사말1</option></c:when>
+                                            <c:when test= "${i == 3}"><option>우림스토리</option></c:when>
+                                            <c:when test= "${i == 1}"><option>왜우림칼국수인가?</option></c:when>
+                                            <c:when test= "${i == 0}"><option>메인로고(IMG${i+1})</option></c:when>
+                                            <c:when test= "${i == 2}"><option>가맹절차(IMG${i+1})</option></c:when>
+                                            <c:when test= "${i == 5}"><option>인사말2(IMG${i+1})</option></c:when>
+                                            <c:when test= "${i == 6}"><option>인사말3(IMG${i+1})</option></c:when>
+                                            <c:when test= "${i == 7}"><option>인사말4(IMG${i+1})</option></c:when>
+                                        </c:choose>
+                                    </select>
+									<div class="sectionAddFormBtns">
+										<input class="fileUploadBtn" type="file" name="uploadFile">
+										<input type="hidden" name="imgType" value="IMG${i+1}" id="imgType"> 
+										<button type="submit" class="sectionUpdateBtn">변경하기 </button>
+                                    </div>		
+							</form>
+						</li>
+			           	<li class="sectionItem">
+			                <div class="sectionImg">               
+			                   <img src="../../resources/img/woolimSection2.png" class="thumbnail" />
+							</div>
+							<form class="sectionAddForm" id="addImageForm" action="mainImgChange.do" method="post" enctype="multipart/form-data">
+                                    <select class="sectionSelections" name="" id="">
+                                        <c:choose>
+                                            <c:when test= "${i == 5}"><option>인사말2</option></c:when>
+                                            <c:when test= "${i == 4}"><option>인사말1(IMG${i+1})</option></c:when>
+                                            <c:when test= "${i == 3}"><option>우림스토리</option></c:when>
+                                            <c:when test= "${i == 1}"><option>왜우림칼국수인가?</option></c:when>
+                                            <c:when test= "${i == 0}"><option>메인로고(IMG${i+1})</option></c:when>
+                                            <c:when test= "${i == 2}"><option>가맹절차(IMG${i+1})</option></c:when>
+                                            <c:when test= "${i == 6}"><option>인사말3(IMG${i+1})</option></c:when>
+                                            <c:when test= "${i == 7}"><option>인사말4(IMG${i+1})</option></c:when>
+                                        </c:choose>
+                                    </select>
+									<div class="sectionAddFormBtns">
+										<input class="fileUploadBtn" type="file" name="uploadFile">
+										<input type="hidden" name="imgType" value="IMG${i+1}" id="imgType"> 
+										<button type="submit" class="sectionUpdateBtn">변경하기 </button>
+                                    </div>		
+							</form>
+						</li>
+			           	<li class="sectionItem">
+			                <div class="sectionImg">               
+			                   <img src="../../resources/img/woolimSection3.png" class="thumbnail" />
+							</div>
+							<form class="sectionAddForm" id="addImageForm" action="mainImgChange.do" method="post" enctype="multipart/form-data">
+                                    <select class="sectionSelections" name="" id="">
+                                        <c:choose>
+                                            <c:when test= "${i == 6}"><option>인사말3</option></c:when>
+                                            <c:when test= "${i == 3}"><option>우림스토리</option></c:when>
+                                            <c:when test= "${i == 1}"><option>왜우림칼국수인가?</option></c:when>
+                                            <c:when test= "${i == 0}"><option>메인로고(IMG${i+1})</option></c:when>
+                                            <c:when test= "${i == 2}"><option>가맹절차(IMG${i+1})</option></c:when>
+                                            <c:when test= "${i == 4}"><option>인사말1(IMG${i+1})</option></c:when>
+                                            <c:when test= "${i == 5}"><option>인사말2(IMG${i+1})</option></c:when>
+                                            <c:when test= "${i == 7}"><option>인사말4(IMG${i+1})</option></c:when>
+                                        </c:choose>
+                                    </select>
+									<div class="sectionAddFormBtns">
+										<input class="fileUploadBtn" type="file" name="uploadFile">
+										<input type="hidden" name="imgType" value="IMG${i+1}" id="imgType"> 
+										<button type="submit" class="sectionUpdateBtn">변경하기 </button>
+                                    </div>		
+							</form>
+						</li>
+			           	<li class="sectionItem">
+			                <div class="sectionImg">               
+			                   <img src="../../resources/img/woolimSection4.png" class="thumbnail" />
+							</div>
+							<form class="sectionAddForm" id="addImageForm" action="mainImgChange.do" method="post" enctype="multipart/form-data">
+                                    <select class="sectionSelections" name="" id="">
+                                        <!-- <c:choose> -->
+                                            <c:when test= "${i == 7}"><option>인사말4</option></c:when>
+                                            <c:when test= "${i == 3}"><option>우림스토리</option></c:when>
+                                            <c:when test= "${i == 1}"><option>왜우림칼국수인가?</option></c:when>
+                                            <c:when test= "${i == 0}"><option>메인로고(IMG${i+1})</option></c:when>
+                                            <c:when test= "${i == 2}"><option>가맹절차(IMG${i+1})</option></c:when>
+                                            <c:when test= "${i == 4}"><option>인사말1(IMG${i+1})</option></c:when>
+                                            <c:when test= "${i == 5}"><option>인사말2(IMG${i+1})</option></c:when>
+                                            <c:when test= "${i == 6}"><option>인사말3(IMG${i+1})</option></c:when>
+                                        <!-- </c:choose> -->
+                                    </select>
+									<div class="sectionAddFormBtns">
+										<input class="fileUploadBtn" type="file" name="uploadFile">
+										<input type="hidden" name="imgType" value="IMG${i+1}" id="imgType"> 
+										<button type="submit" class="sectionUpdateBtn">변경하기 </button>
+                                    </div>		
+							</form>
+						</li>
+					<!-- </c:forEach> -->
+	            </ul>
+        </div>
+        
+        <div class="manageBox">
+            <h1>프랜차이즈 관리</h1>
+            <form id="addImageForm" action="franchiseAdd.do" method="post" enctype="multipart/form-data">
+            
+                <input type="file" name="uploadFile">
+        
+                <input type="text" id="franchisePlaceName" name="franchisePlaceName" placeholder="지점 이름" />
+                <input type="text" id="franchiseNum" name="franchiseNum" placeholder="연락처" />
+                <input type="text" id="franchiseAddress" name="franchiseAddress"  placeholder="주소" />
+                <input type="hidden" name="updateType" value=0 id="updateType">
+                <button type="submit" class="submitBtn">저장하기</button>
+            </form>
+            <ul class="franchiseList">
+                <c:forEach  items="${franchise_list}" var="woolimFood">
+                    <li data-id="${woolimFood.franchiseRagneNum}">
+                        <div class="listFranTop">
+                         <img
+    						src="../../resources/franchiseIMG/${woolimFood.franchiseImg}"
+    						class="thumbnail"
+                            />
+                        </div>
+                        <div class="listFranMid">
+                            <div>
+                                <div>${woolimFood.franchisePlaceName}</div>
+                                <div>${woolimFood.franchiseNum}</div>
+                            </div>
+                            <div>
+                                <div>${woolimFood.franchiseAddress}</div>
+                            </div>
+                        </div>
+                    
+                        <div class="listFranBottom">
+                            <form class="franBottomLeft" action="moveLeft.do" method="post">
+                                    <input type="hidden" name="franchiseRagneNum" value="${woolimFood.franchiseRagneNum}" id="franchiseRagneNum">
+                                    <input type="hidden" name="franchiseSEQ" value="${woolimFood.franchiseSEQ}" id="franchiseSEQ">
+                                    <input type="hidden" name="updateType" value=0 id="updateType">
+                                    <button class="moveLeft" type="submit">
+                                        &larr;
+                                    </button>
+                            </form>
+                            <form action="moveRight.do" method="post">
+                                    <input type="hidden" name="franchiseRagneNum" value="${woolimFood.franchiseRagneNum}" id="franchiseRagneNum">
+                                    <input type="hidden" name="franchiseSEQ" value="${woolimFood.franchiseSEQ}" id="franchiseSEQ">
+                                    <input type="hidden" name="updateType" value=0 id="updateType">
+                                    <button class="moveRight" type="submit">
+                                        &rarr;
+                                    </button>
+                            </form>
+                            <form action="remove.do" method="post">
+                                    <input type="hidden" name="franchiseRagneNum" value="${woolimFood.franchiseRagneNum}" id="franchiseRagneNum">
+                                    <input type="hidden" name="franchiseSEQ" value="${woolimFood.franchiseSEQ}" id="franchiseSEQ">
+                                    <input type="hidden" name="updateType" value=0 id="updateType">
+                                    <button class="remove" type="submit">
+                                        삭제
+                                    </button>
+                            </form>
+                        </div>
+                    </li>
+                </c:forEach>
+               
+            </ul>
+        </div>
+
+        <!--------------------------menuList--------------------------------->
+        <div class="manageBox">
+            <h1>메뉴 관리</h1>
+            <form id="addImageForm" action="franchiseAdd.do" method="post" enctype="multipart/form-data">
+                <input type="file" name="uploadFile">
+                <input type="text" id="menuName" name="menuName" placeholder="메뉴 이름" />
+                <input type="text" id="menuSummary" name="menuSummary" placeholder="메뉴 설명" />
+                <input type="hidden" name="updateType" value=1 id="updateType">
+                <button type="submit" class="submitBtn">저장하기</button>
+            </form>
+            <ul class="menuImgList">
+                <c:forEach  items="${menu_list}" var="woolimFood">
+                    <li data-id="${woolimFood.franchiseRagneNum}">
+                        <div class="menuTop">
+                            <img
+                               src="../../resources/menuIMG/${woolimFood.menuIMG}"
+                               class="thumbnail"
+                               />
+                        </div>
+                        <div class="menuMid">
+                            <div>${woolimFood.menuName}</div>
+							<div>${woolimFood.menuSummary}</div>
+                        </div>
+                        <div class="menuBot">
+
+                            <form action="moveLeft.do" method="post">
+                                    <input type="hidden" name="franchiseRagneNum" value="${woolimFood.franchiseRagneNum}" id="franchiseRagneNum">
+                                    <input type="hidden" name="franchiseSEQ" value="${woolimFood.franchiseSEQ}" id="franchiseSEQ">
+                                    <input type="hidden" name="updateType" value=1 id="updateType">
+                                    <button class="moveLeft" type="submit">
+                                        &larr;
+                                    </button>
+                            </form>
+                            <form action="moveRight.do" method="post">
+                                    <input type="hidden" name="franchiseRagneNum" value="${woolimFood.franchiseRagneNum}" id="franchiseRagneNum">
+                                    <input type="hidden" name="franchiseSEQ" value="${woolimFood.franchiseSEQ}" id="franchiseSEQ">
+                                    <input type="hidden" name="updateType" value=1 id="updateType">
+                                    <button class="moveRight" type="submit">
+                                        &rarr;
+                                    </button>
+                            </form>
+                            <form action="remove.do" method="post">
+                                    <input type="hidden" name="franchiseRagneNum" value="${woolimFood.franchiseRagneNum}" id="franchiseRagneNum">
+                                    <input type="hidden" name="franchiseSEQ" value="${woolimFood.franchiseSEQ}" id="franchiseSEQ">
+                                    <input type="hidden" name="updateType" value=1 id="updateType">
+                                    <button class="remove" type="submit">
+                                        삭제
+                                    </button>
+                            </form>
+                        </div>
+                    </li>
+                </c:forEach>
+            </ul>
+        </div>
+
+        <script src="../../resources/js/manageJs/bannerImgManage.js"></script>
+        <script src="../../resources/js/manageJs/manageFileImage.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const expandableElements = document.querySelectorAll('.expandable');
+                expandableElements.forEach(el => {
+                    const originalText = el.innerText;
+                    if (originalText.length > 20) {
+                        const truncatedText = originalText.substring(0, 20) + '...';
+                        el.innerText = truncatedText;
+                        el.classList.add('collapsed');
+                        el.addEventListener('click', () => {
+                            if (el.classList.contains('collapsed')) {
+                                el.innerText = originalText;
+                                el.classList.remove('collapsed');
+                                el.style.whiteSpace = 'normal';
+                            } else {
+                                el.innerText = truncatedText;
+                                el.classList.add('collapsed');
+                                el.style.whiteSpace = 'nowrap';
+                            }
+                        });
+                    }
+                });
+            });
+        </script>
+        <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // mainImgList 관련 변수 및 이벤트 핸들러
+        const mainImgList = document.querySelector('.sectionList');
+        let isDownMain = false;
+        let startXMain;
+        let scrollLeftMain;
+
+        const scrollMouseDownMain = (event) => {
+            isDownMain = true;
+            startXMain = event.pageX - mainImgList.offsetLeft;
+            scrollLeftMain = mainImgList.scrollLeft;
+        }
+
+        const scrollMouseLeaveMain = () => {
+            isDownMain = false;
+        }
+
+        const scrollMouseUpMain = () => {
+            isDownMain = false;
+        }
+
+        const scrollMouseMoveMain = (event) => {
+            if (!isDownMain) return;
+            event.preventDefault();
+            const x = event.pageX - mainImgList.offsetLeft;
+            const walk = (x - startXMain) * 3; //scroll-fast
+            mainImgList.scrollLeft = scrollLeftMain - walk;
+        }
+
+        if (mainImgList) {
+            mainImgList.addEventListener('mousedown', scrollMouseDownMain);
+            mainImgList.addEventListener('mouseleave', scrollMouseLeaveMain);
+            mainImgList.addEventListener('mouseup', scrollMouseUpMain);
+            mainImgList.addEventListener('mousemove', scrollMouseMoveMain);
+        }
+
+        // franchiseList 관련 변수 및 이벤트 핸들러
+        const franchiseList = document.querySelector('.franchiseList');
+        let isDownFranchise = false;
+        let startXFranchise;
+        let scrollLeftFranchise;
+
+        const scrollMouseDownFranchise = (event) => {
+            isDownFranchise = true;
+            startXFranchise = event.pageX - franchiseList.offsetLeft;
+            scrollLeftFranchise = franchiseList.scrollLeft;
+        }
+
+        const scrollMouseLeaveFranchise = () => {
+            isDownFranchise = false;
+        }
+
+        const scrollMouseUpFranchise = () => {
+            isDownFranchise = false;
+        }
+
+        const scrollMouseMoveFranchise = (event) => {
+            if (!isDownFranchise) return;
+            event.preventDefault();
+            const x = event.pageX - franchiseList.offsetLeft;
+            const walk = (x - startXFranchise) * 3; //scroll-fast
+            franchiseList.scrollLeft = scrollLeftFranchise - walk;
+        }
+
+        if (franchiseList) {
+            franchiseList.addEventListener('mousedown', scrollMouseDownFranchise);
+            franchiseList.addEventListener('mouseleave', scrollMouseLeaveFranchise);
+            franchiseList.addEventListener('mouseup', scrollMouseUpFranchise);
+            franchiseList.addEventListener('mousemove', scrollMouseMoveFranchise);
+        }
+
+        // menuImgList 관련 변수 및 이벤트 핸들러
+        const menuImgList = document.querySelector('.menuImgList');
+        let isDownMenu = false;
+        let startXMenu;
+        let scrollLeftMenu;
+
+        const scrollMouseDownMenu = (event) => {
+            isDownMenu = true;
+            startXMenu = event.pageX - menuImgList.offsetLeft;
+            scrollLeftMenu = menuImgList.scrollLeft;
+        }
+
+        const scrollMouseLeaveMenu = () => {
+            isDownMenu = false;
+        }
+
+        const scrollMouseUpMenu = () => {
+            isDownMenu = false;
+        }
+
+        const scrollMouseMoveMenu = (event) => {
+            if (!isDownMenu) return;
+            event.preventDefault();
+            const x = event.pageX - menuImgList.offsetLeft;
+            const walk = (x - startXMenu) * 3; //scroll-fast
+            menuImgList.scrollLeft = scrollLeftMenu - walk;
+        }
+
+        if (menuImgList) {
+            menuImgList.addEventListener('mousedown', scrollMouseDownMenu);
+            menuImgList.addEventListener('mouseleave', scrollMouseLeaveMenu);
+            menuImgList.addEventListener('mouseup', scrollMouseUpMenu);
+            menuImgList.addEventListener('mousemove', scrollMouseMoveMenu);
+        }
+    });
+</script>
+
+    </body>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mainImgList = document.querySelector('.sectionList');
+            const franchiseList = document.querySelector('.franchiseList');
+            const menuImgList = document.querySelector('.menuImgList');
+            
+            let isDown1 = false;
+            let startX1;
+            let scrollLeft1;
+            
+            const scrollMouseDown = (event) => {
+                isDown1 = true;
+                startX1 = event.pageX - mainImgList.offsetLeft;
+                scrollLeft1 = mainImgList.scrollLeft;
+            }
+            
+            const scrollMouseLeve = () => {
+                isDown1 = false;
+            }
+            
+            const scrollMouseUp = () => {
+                isDown1 = false;
+            }
+            
+            const scrollMouseMove = (event) => {
+                if (!isDown1) return;
+                event.preventDefault();
+                const x = event.pageX - mainImgList.offsetLeft;
+                const walk = (x - startX1) * 3; //scroll-fast
+                mainImgList.scrollLeft = scrollLeft1 - walk;
+            }
+            
+            // if (mainImgList) {
+                mainImgList.addEventListener('mousedown', scrollMouseDown);
+                mainImgList.addEventListener('mouseleave', scrollMouseLeve);
+                mainImgList.addEventListener('mouseup', scrollMouseUp);
+                mainImgList.addEventListener('mousemove', scrollMouseMove);
+            // }
+            
+            // if (franchiseList) {
+                franchiseList.addEventListener('mousedown', scrollMouseDown);
+                franchiseList.addEventListener('mouseleave', scrollMouseLeve);
+                franchiseList.addEventListener('mouseup', scrollMouseUp);
+                franchiseList.addEventListener('mousemove', scrollMouseMove);
+            // }
+            
+            // if (menuImgList) {
+                menuImgList.addEventListener('mousedown', scrollMouseDown);
+                menuImgList.addEventListener('mouseleave', scrollMouseLeve);
+                menuImgList.addEventListener('mouseup', scrollMouseUp);
+                menuImgList.addEventListener('mousemove', scrollMouseMove);
+            // }
+
+        });
+        
+    </script>
+</html>
+
